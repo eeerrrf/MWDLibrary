@@ -14,11 +14,10 @@ $(document).ready(function(){
             method: "GET",
             success: function(response) {
           
-            
             }
-            },
-        }); 
-    }
+            }
+        } 
+
     
     
     
