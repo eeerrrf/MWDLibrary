@@ -9,19 +9,16 @@ $(document).ready(function(){
     //API for a link u guys could change
     function API(searchTerm){
         
-        
         $.ajax({
-            url: "https://api.giphy.com/v1/stickers/search?q="+searchTerm+"&api_key=dc6zaTOxFJmzC",
+            url: "https://www.googleapis.com/books/v1/volumes?q=harry%20potter",
             method: "GET",
             success: function(response) {
           
-
-                }
-
+            
+            }
             },
-    
-    
-    
+        }); 
+    }
     
     
     
