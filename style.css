@@ -1,0 +1,21 @@
+p{
+font-size:190%;
+}
+
+h2{
+font-size:500%;
+}
+
+h1{
+background-color:red;
+border:2px solid yellow;
+}
+
+ 
+.col-md-8, .col-md-4, .col-md-2, .col-md-6{
+border: 3px solid black;
+}
+
+h2{
+    font-weight:bold;       
+}
