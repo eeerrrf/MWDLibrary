@@ -16,14 +16,18 @@ $(document).ready(function(){
             success: function(response) {
                 //clear the container so that they can search up the books
           $("#details").empty();
-                console.log(response);
-                var image = response.items[0].volumeInfo.imageLinks;
-                console.log(image);
+                //console.log(response);
+                //var image = response.items[0].volumeInfo.imageLinks;
+                
+                //console.log(image);
                 //appendBookInformationToBody("<img src="+image+">");
+                
                 var author = response.items[0].volumeInfo.author;
                 //appendBookInformationToBody(author);
+                
                 var title = response.items[0].volumeInfo.title;
                 var book = response.items[0].volumeInfo;
+
                 appendBookInformationToBody(book);
             },
             });
@@ -34,8 +38,8 @@ $(document).ready(function(){
     
     function appendBookInformationToBody(book) {
         console.log(book);
-
-    $('body').append(); 
+        $("body").append(); 
+    
 }
 
     
