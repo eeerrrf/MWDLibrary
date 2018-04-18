@@ -11,34 +11,37 @@ $(document).ready(function(){
     function API(searchTerm){
         
         $.ajax({
-            url: "https://www.googleapis.com/books/v1/volumes?q=" +searchTerm+ "inauthor:",
+            url: "https://www.googleapis.com/books/v1/volumes?q=" +searchTerm,
             method: "GET",
             success: function(response) {
+                console.log(response);
                 //clear the container so that they can search up the books
-          $("#details").empty();
-                //console.log(response);
-                //var image = response.items[0].volumeInfo.imageLinks;
+                $("#details").empty();
+                 if (response.items.volumeInfo > 10) {
+                   var maximum = 10;
+                   } else {
+                       var maximum = response.items.length;
+                   }
+                   
+                   for (var i = 0; i < maximum; i++) {
+                     var title = response.items[i].volumeInfo.title;
+                     var author = response.items[i].volumeInfo.authors[0];
                 
-                //console.log(image);
-                //appendBookInformationToBody("<img src="+image+">");
-                
-                var author = response.items[0].volumeInfo.author;
-                //appendBookInformationToBody(author);
-                
-                var title = response.items[0].volumeInfo.title;
-                var book = response.items[0].volumeInfo;
-
-                appendBookInformationToBody(book);
-            },
+                     appendBookInformationToBody (title, author); 
+            }
+            }
             });
+            
+            
         } 
     
     
     
     
-    function appendBookInformationToBody(book) {
-        console.log(book);
-        $("body").append(); 
+    
+    function appendBookInformationToBody(, author, image) {
+        console.log(title, author);
+        $("body").append(title, author); 
     
 }
 
