@@ -12,10 +12,14 @@ border:2px solid yellow;
 }
 
  
-.col-md-8, .col-md-4, .col-md-2, .col-md-6{
+.col-md-8, .col-md-4, .col-md-2, .col-md-6, .book{
 border: 3px solid black;
 }
 
 h2{
     font-weight:bold;
+}
+
+.book{
+    text-align: center;
 }

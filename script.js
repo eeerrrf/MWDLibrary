@@ -26,8 +26,8 @@ $(document).ready(function(){
                    for (var i = 0; i < maximum; i++) {
                      var title = response.items[i].volumeInfo.title;
                      var author = response.items[i].volumeInfo.authors[0];
-                
-                     appendBookInformationToBody (title, author); 
+                     var image = response.items[i].volumeInfo.imageLinks.thumbnail;
+                     appendBookInformationToBody (title, author, image);
             }
             }
             });
@@ -39,9 +39,11 @@ $(document).ready(function(){
     
     
     
-    function appendBookInformationToBody(, author, image) {
-        console.log(title, author);
-        $("body").append(title, author); 
+    function appendBookInformationToBody(title, author,image) {
+        console.log(title, author, image);
+        $("#details").append("<div class='book'>" + 
+        "<img src='"+image+"'/>"+"Title:"+title +"Author:"+ author+
+        "</div>"); 
     
 }
 
