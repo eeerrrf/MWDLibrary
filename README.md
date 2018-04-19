@@ -13,3 +13,12 @@ objective:
         -Filter by author
         -submit a review for a book and display it the page
         -A way to "favorite" a book
+        
+        
+        
+    Contact information:
+    
+    ScriptEd Library
+    1263 Reading Road
+    San Francisco, CA 94107
+    (555)-555-5555

@@ -20,6 +20,14 @@ h2{
     font-weight:bold;
 }
 
-.book{
-    text-align: center;
+h3::first-letter{
+    color:gold;
+    font-size: 150%;
+    background-color:red;
+}
+
+html {
+    
+font-family: 'Roboto Condensed', sans-serif;
+
 }
